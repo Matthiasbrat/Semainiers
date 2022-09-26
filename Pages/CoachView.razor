@@ -1,0 +1,71 @@
+@page "/coach"
+@page "/"
+@using Renci.SshNet
+@using Semainier.Data
+@inject EleveService eleveService
+@inject DBService dbService
+
+<h3>CoachView</h3>
+
+<div class="row">
+    <div class="col">
+        <label class="control-label">Eleve</label>
+        <input type="text" class="form-control" @bind-value="searchText" @bind-value:event="oninput"/>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Email
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eleve in elevesFiltered)
+        {
+            <tr>
+                <td>
+                    @eleve.Email
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    public string searchText { get; set; } = "";
+    List<Eleve> allEleves = new List<Eleve>();
+    string[]? output;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        // Set Client SSH connection properties
+        await dbService.SetSshClient("gv7t4.ftp.infomaniak.com", "gv7t4_admin", "Dragon_lion_8390");
+        // Set the connection string for the DB connection
+        await dbService.SetDbConnectionString("gv7t4.myd.infomaniak.com", "gv7t4_Matthias", "Dragon_lion_8390", "gv7t4_dbSemainiers");
+        // SSH connection from client
+        await dbService.Connect();
+        // Executing SQL command from MySQL command using SSH tunneling
+        string[] output = await dbService.ExecuteSqlCommandOnDB("SELECT email FROM Eleve;");
+        // SSH disconnection
+        await dbService.Disconnect();
+
+        // Get all eleves from stored in output after query execution
+        foreach (var item in output)
+        {
+            if (!(eleveService.GetAllEleves().Result.Any(eleve => eleve.Email == item)))
+            {
+                await eleveService.NewEleve(new Eleve() { Email = item.ToString() });
+            }
+        }
+        // Get all Eleves
+        allEleves = await eleveService.GetAllEleves();
+
+    }
+    // List of eleves filtered by input text
+    List<Eleve> elevesFiltered => allEleves.Where(e => e.Email.ToLower().Contains(searchText.ToLower())).ToList();
+}

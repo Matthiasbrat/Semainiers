@@ -1,0 +1,9 @@
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\Semainier.exe
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\appsettings.json
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\Semainier.dll
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\Semainier.deps.json
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\Semainier.runtimeconfig.json
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\Semainier.pdb
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\Renci.SshNet.dll
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\Release\net6.0\PubTmp\Out\SshNet.Security.Cryptography.dll

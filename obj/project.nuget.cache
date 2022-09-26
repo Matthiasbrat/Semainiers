@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PHrZ44M6oN41SUbZA4FsrFlJ53gXOIp1YrtKu4mv2MAwxEAn4z7v+L0Kzeiqh4ZcxBUwgc25wv+xFXN7KB1/lg==",
+  "success": true,
+  "projectFilePath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\Semainier.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\matth\\.nuget\\packages\\ssh.net\\2020.0.2\\ssh.net.2020.0.2.nupkg.sha512",
+    "C:\\Users\\matth\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
