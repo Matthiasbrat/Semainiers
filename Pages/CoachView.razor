@@ -1,71 +1,209 @@
-@page "/coach"
 @page "/"
+@page "/coach/{Email}"
+@page "/coach/{Email}/{Week}"
+@page "/coach"
+
+@using Blazorise.DataGrid;
+@using Blazorise.Extensions
+@using Blazorise
 @using Renci.SshNet
 @using Semainier.Data
+
 @inject EleveService eleveService
-@inject DBService dbService
+@inject DBService dbSshService
+@inject NavigationManager nav
 
-<h3>CoachView</h3>
-
-<div class="row">
-    <div class="col">
-        <label class="control-label">Eleve</label>
-        <input type="text" class="form-control" @bind-value="searchText" @bind-value:event="oninput"/>
+<h3>Devoirs des élèves</h3>
+<div style="width: 75%; margin-left: 50px;">
+    <div class="row">
+        <div class="col">
+            <label class="control-label">Recherche :</label>
+            <input type="text" class="form-control" @bind-value="searchTextEleve" @bind-value:event="oninput" />
+        </div>
+    </div>
+    <div class="list-group mt-3">
+        @foreach(var eleve in elevesFilteredWthIdx.Select((eleve, i) => (eleve, i)))
+        {
+            <a @onclick="@(() => GetSemainierOfEleve(eleve.i))" href="/coach/@eleve.eleve.eleve.Email" class="list-group-item list-group-item-action flex-column align-items-start"
+               style="-webkit-user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none;">
+                <div class="d-flex w-100 justify-content-between">
+                    <h7 class="mb-0">@eleve.eleve.eleve.Email</h7>
+                    <span class="badge badge-primary badge-pill pt-2">@eleve.eleve.eleve.numSemainiers</span>
+                </div>
+            </a>
+        }
+    </div>
+    <select @bind="selectedWeek" class="form-select mt-5 mb-3 w-25" aria-label="Default select example">
+        <option selected>Toutes les semaines</option>
+        @if (selectedEleve != -1)
+        {
+            @foreach (var item in Semainier.weeksNumber)
+            {
+                <option>@item</option>
+            }
+        }
+    </select>
+    <div class="table-responsive card mb-5">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Branche</th>
+                    <th class="text-center" scope="col">Minutes</th>
+                    <th class="text-center" scope="col">Remarques</th>
+                </tr>
+            </thead>
+            @if (selectedEleve != -1)
+            {
+                @foreach (var item in listSemainierFiltered)
+                {
+                    <tbody>
+                        <tr>
+                            <th scope="row">@item.id</th>
+                            <td>@item.date</td>
+                            <td>@item.subject</td>
+                            <td class="text-center">@item.minutes</td>
+                            <td class="text-center">@item.more</td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
     </div>
 </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Email
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var eleve in elevesFiltered)
-        {
-            <tr>
-                <td>
-                    @eleve.Email
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
 @code {
+    public List<Eleve> allEleves = new List<Eleve>();
 
-    public string searchText { get; set; } = "";
-    List<Eleve> allEleves = new List<Eleve>();
+    [Parameter]
+    public string email { get; set; } = "";
+    [Parameter]
+    public string week { get; set; } = "";
+
+    public string searchTextEleve { get; set; } = "";
+    public string searchTextSemainier { get; set; } = "";
+
+    List<(Eleve eleve, int i)> elevesFilteredWthIdx = new List<(Eleve eleve, int i)>();
+
+    private int idxEleve = 0;
+    private int idxSemainier = 0;
+    private string[] ElevePos = { };
+
+    private int selectedEleve = -1;
+    private string selectedWeekVar;
+    private string selectedWeek { get { return selectedWeekVar; } set { selectedWeekVar = value; FilterByWeek(); } }
+
+    List<string> allNames = new List<string>();
+    DBService dbService = new DBService();
     string[]? output;
+    MainLayout mainLayout = new MainLayout();
+
+    private bool once = true;
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+    private IJSObjectReference jsModule;
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
+
+        if (!MainLayout.loggedIn)
+            nav.NavigateTo("NavMenu");
+
         // Set Client SSH connection properties
         await dbService.SetSshClient("gv7t4.ftp.infomaniak.com", "gv7t4_admin", "Dragon_lion_8390");
+
         // Set the connection string for the DB connection
         await dbService.SetDbConnectionString("gv7t4.myd.infomaniak.com", "gv7t4_Matthias", "Dragon_lion_8390", "gv7t4_dbSemainiers");
+
         // SSH connection from client
         await dbService.Connect();
+
         // Executing SQL command from MySQL command using SSH tunneling
-        string[] output = await dbService.ExecuteSqlCommandOnDB("SELECT email FROM Eleve;");
-        // SSH disconnection
-        await dbService.Disconnect();
+        string[] output = ((await dbService.ExecuteSqlCommandOnDB("SELECT email FROM Eleve;")).Skip(1).ToArray()).SkipLast(1).ToArray();
 
         // Get all eleves from stored in output after query execution
         foreach (var item in output)
         {
             if (!(eleveService.GetAllEleves().Result.Any(eleve => eleve.Email == item)))
             {
-                await eleveService.NewEleve(new Eleve() { Email = item.ToString() });
+                string name = (item.Split('@')[0]).Replace('.', ' ');
+                await eleveService.NewEleve(new Eleve() { Email = item.ToString(), Name = name.ToString(), numSemainiers = await eleveService.CountSemainiers(item) });
             }
         }
-        // Get all Eleves
+
+
+        // Get all Eleves email
         allEleves = await eleveService.GetAllEleves();
 
+        // SSH disconnection
+        await dbService.Disconnect();
+
+        // List of eleves filtered by input text
+        foreach (Eleve eleve in elevesFiltered)
+        {
+            elevesFilteredWthIdx.Add((eleve, idxEleve));
+            idxEleve++;
+        }
+
+        if (once)
+        {
+            once = false;
+            jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./scripts/script.js");
+
+            List<string> weekDays = (Enumerable.Range(1, 44 * 7).Select(i => new DateTime(DateTime.Now.Year, 08, 21).AddDays(i).ToString("dd.MM")).ToList());
+            Semainier.weekDays = Enumerable.Range(0, 44).Select(i => weekDays.Skip(i * 7).Take(7).ToArray()).ToArray();
+
+            Semainier.weeksNumber = Enumerable.Range(1, 44).Select(i => "Semaine " + i.ToString().PadLeft(2, '0') + " (" + Semainier.weekDays[i - 1][0] + "-" + Semainier.weekDays[i - 1][6] + ")").ToList();
+        }
+
     }
-    // List of eleves filtered by input text
-    List<Eleve> elevesFiltered => allEleves.Where(e => e.Email.ToLower().Contains(searchText.ToLower())).ToList();
+
+    List<Eleve> elevesFiltered => allEleves.Where(e => e.Name.ToLower().Contains(searchTextEleve.ToLower()) || e.Email.ToLower().Contains(searchTextEleve.ToLower())).ToList();
+
+    private async void GetSemainierOfEleve(int i)
+    {
+        await jsModule.InvokeVoidAsync("setActive", i);
+        selectedEleve = i;
+
+        if (email != "")
+        {
+            await dbService.Connect();
+            elevesFiltered[i].Semainiers = await eleveService.GetSemainiers(email);
+            await dbService.Disconnect();
+            FilterByWeek();
+        }
+    }
+
+    List<Semainier> listSemainierFiltered = new List<Semainier>();
+    private async void FilterByWeek()
+    {
+        listSemainierFiltered = new List<Semainier>();
+        await dbService.Connect();
+        if (selectedWeekVar == "Toutes les semaines" || selectedWeekVar == null)
+        {
+            listSemainierFiltered = (await eleveService.GetSemainiers(elevesFiltered[selectedEleve].Email)).ToList();
+        }
+        else
+        {
+            List<string> dates = elevesFiltered[selectedEleve].Semainiers.Select(s => s.date).ToList();
+            List<string> datesInWeek = Semainier.InWeek(dates, int.Parse(selectedWeek.Substring(8, 2)) - 1).ToList();
+            idxSemainier = 0;
+
+            foreach (var date in datesInWeek)
+            {
+                Semainier[] semTemp = await eleveService.GetSemainiers(elevesFiltered[selectedEleve].Email, date);
+                foreach (var st in semTemp)
+                {
+                    idxSemainier++;
+                    st.id = idxSemainier;
+                    listSemainierFiltered.Add(st);
+                }
+            }
+        }
+        await dbService.Disconnect();
+        StateHasChanged();
+    }
 }

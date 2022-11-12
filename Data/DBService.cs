@@ -17,7 +17,7 @@ namespace Semainier.Data
 
         public async Task<bool> SetDbConnectionString(string host, string user, string pass, string schema)
         {
-            DB.connectionString = new DbConnectionString(host, user, pass, schema);
+            connectionString = new DbConnectionString(host, user, pass, schema);
             return true;
         }
 
