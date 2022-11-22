@@ -13,6 +13,7 @@ builder.Services.AddSingleton<EleveService>();
 builder.Services.AddSingleton<DBService>();
 builder.Services.AddScoped<ILocalStorage, LocalStorage>();
 builder.Services.AddBlazorise(options => { options.Immediate = true; }).AddBootstrapProviders().AddFontAwesomeIcons();
+builder.Services.AddServerSideBlazor().AddCircuitOptions(options => {  options.DetailedErrors = true; });
 
 var app = builder.Build();
 

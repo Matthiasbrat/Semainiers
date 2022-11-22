@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Semainier
 build_property.RootNamespace = Semainier
-build_property.ProjectDir = N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\
+build_property.ProjectDir = C:\temp\Semainiers\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier
+build_property.MSBuildProjectDirectory = C:\temp\Semainiers
 build_property._RazorSourceGeneratorDebug = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/App.razor]
+[C:/temp/Semainiers/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/Account.razor]
+[C:/temp/Semainiers/Pages/Account.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/CoachView.razor]
+[C:/temp/Semainiers/Pages/CoachView.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29hY2hWaWV3LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/Error.razor]
+[C:/temp/Semainiers/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Shared/LoadingScreen.razor]
+[C:/temp/Semainiers/Shared/LoadingScreen.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmdTY3JlZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/_Imports.razor]
+[C:/temp/Semainiers/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Shared/MainLayout.razor]
+[C:/temp/Semainiers/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1s65xtx5iw
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Shared/NavMenu.razor]
+[C:/temp/Semainiers/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-szgpd83mdg
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/Error.cshtml]
+[C:/temp/Semainiers/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/_Host.cshtml]
+[C:/temp/Semainiers/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/_Layout.cshtml]
+[C:/temp/Semainiers/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
