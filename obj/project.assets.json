@@ -47,31 +47,6 @@
           "buildMultiTargeting/Blazorise.Bootstrap.props": {}
         }
       },
-      "Blazorise.DataGrid/1.1.3.1": {
-        "type": "package",
-        "dependencies": {
-          "Blazorise": "1.1.3.1",
-          "Microsoft.AspNetCore.Components": "6.0.9",
-          "Microsoft.AspNetCore.Components.Web": "6.0.9",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.3"
-        },
-        "compile": {
-          "lib/net6.0/Blazorise.DataGrid.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Blazorise.DataGrid.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/Blazorise.DataGrid.props": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Blazorise.DataGrid.props": {}
-        }
-      },
       "Blazorise.Icons.FontAwesome/1.1.3.1": {
         "type": "package",
         "dependencies": {
@@ -433,28 +408,6 @@
         "staticwebassets/blazorise.bootstrap.min.css",
         "staticwebassets/modal.js",
         "staticwebassets/tooltip.js"
-      ]
-    },
-    "Blazorise.DataGrid/1.1.3.1": {
-      "sha512": "9dZeR8uo726neR/SZdzfICLe/LCg7XxRD/GqM7FknmMkryogopw6pturJ4iTX47a6YthpqCD8XbOY0p3UGf2XQ==",
-      "type": "package",
-      "path": "blazorise.datagrid/1.1.3.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Blazorise.png",
-        "LICENSE.md",
-        "blazorise.datagrid.1.1.3.1.nupkg.sha512",
-        "blazorise.datagrid.nuspec",
-        "build/Blazorise.DataGrid.props",
-        "build/Microsoft.AspNetCore.StaticWebAssets.props",
-        "buildMultiTargeting/Blazorise.DataGrid.props",
-        "buildTransitive/Blazorise.DataGrid.props",
-        "lib/net6.0/Blazorise.DataGrid.dll",
-        "lib/net6.0/Blazorise.DataGrid.xml",
-        "lib/net7.0/Blazorise.DataGrid.dll",
-        "lib/net7.0/Blazorise.DataGrid.xml",
-        "staticwebassets/datagrid.js"
       ]
     },
     "Blazorise.Icons.FontAwesome/1.1.3.1": {
@@ -877,28 +830,32 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Blazorise.Bootstrap >= 1.1.3.1",
-      "Blazorise.DataGrid >= 1.1.3.1",
       "Blazorise.Icons.FontAwesome >= 1.1.3.1",
       "Npgsql >= 7.0.0",
       "SSH.NET >= 2020.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matth\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrateur\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\Semainier.csproj",
+      "projectUniqueName": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\Semainier.csproj",
       "projectName": "Semainier",
-      "projectPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\Semainier.csproj",
-      "packagesPath": "C:\\Users\\matth\\.nuget\\packages\\",
-      "outputPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\obj\\",
+      "projectPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\Semainier.csproj",
+      "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
+      "outputPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\NuGet.Config",
-        "C:\\Users\\matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\NuGet.Config",
+        "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -924,10 +881,6 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Blazorise.Bootstrap": {
-            "target": "Package",
-            "version": "[1.1.3.1, )"
-          },
-          "Blazorise.DataGrid": {
             "target": "Package",
             "version": "[1.1.3.1, )"
           },
@@ -963,7 +916,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
