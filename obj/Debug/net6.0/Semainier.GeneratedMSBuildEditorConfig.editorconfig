@@ -28,6 +28,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29hY2hWaWV3LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +38,17 @@ build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmdTY3JlZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/_Imports.razor]
+=======
+[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/obj/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/obj/Shared/LoadingScreen.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmdTY3JlZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[N:/3eme/PR_Proj/P_Practice/realisation/Application_web_vsc2022/Semainier/obj/_Imports.razor]
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "S6uf2AcNz5VN53A9V3viNY3VgwRCTnAHK7bdVWEVxLLBAhFXY9u3c/mcJVRwL/TGDqUPZSZBjVaXzAm753+6kg==",
+=======
+  "dgSpecHash": "nCRRg5AcVNKTrTno2QVh3EUaJlOrGLFAx3h8ud/RMRNbhiu+r0XgRCBlTi+qR9dnLZN2jpJcpU+5Cs5S7H5/Sw==",
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
   "success": true,
   "projectFilePath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\Semainier.csproj",
   "expectedPackageFiles": [

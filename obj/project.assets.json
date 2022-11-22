@@ -844,15 +844,25 @@
     "restore": {
       "projectUniqueName": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\Semainier.csproj",
       "projectName": "Semainier",
+<<<<<<< HEAD
       "projectPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\Semainier.csproj",
       "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
       "outputPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\",
+=======
+      "projectPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\Semainier.csproj",
+      "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
+      "outputPath": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\obj\\",
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\NuGet.Config",
+=======
+        "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\NuGet.Config",
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
         "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

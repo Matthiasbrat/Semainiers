@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "NaHfW2VqtiXsM031lh1tlUbCIw9V79nuLAwrQS2w1jA=",
+=======
+  "Hash": "TxF8+PhiLMboUKBtRPGgO/CnXJtyXRYUv2uMFNDzi2g=",
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
   "Source": "Semainier",
   "BasePath": "_content/Semainier",
   "Mode": "Default",
@@ -697,7 +701,28 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\wwwroot\\css\\loading.css",
+=======
+      "Identity": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\wwwroot\\css\\loading.css",
+      "SourceId": "Semainier",
+      "SourceType": "Discovered",
+      "ContentRoot": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\wwwroot\\",
+      "BasePath": "_content/Semainier",
+      "RelativePath": "css/loading.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\loading.css"
+    },
+    {
+      "Identity": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
       "SourceId": "Semainier",
       "SourceType": "Discovered",
       "ContentRoot": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\wwwroot\\",
@@ -901,7 +926,28 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\wwwroot\\img\\stars.png",
+=======
+      "Identity": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\wwwroot\\img\\stars.png",
+      "SourceId": "Semainier",
+      "SourceType": "Discovered",
+      "ContentRoot": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\wwwroot\\",
+      "BasePath": "_content/Semainier",
+      "RelativePath": "img/stars.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\stars.png"
+    },
+    {
+      "Identity": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\obj\\wwwroot\\scripts\\script.js",
+>>>>>>> 4bad905352da890b2ac9f6d56deb4ba23e2e0705
       "SourceId": "Semainier",
       "SourceType": "Discovered",
       "ContentRoot": "N:\\3eme\\PR_Proj\\P_Practice\\realisation\\Application_web_vsc2022\\Semainier\\wwwroot\\",
