@@ -57,7 +57,8 @@ namespace Semainier.Data
                 int realId = int.Parse(objSorted[i].Value[0].ToString());
                 int id = objSorted[i].Index;
                 string date = objSorted[i].Value[1].ToString();
-                date = DateTime.Parse(date).Day.ToString().PadLeft(2, '0') + "." + DateTime.Parse(date).Month.ToString().PadLeft(2, '0') + "." + DateTime.Parse(date).Year.ToString();
+                string r = DateTime.Parse("25.11.2022").Day.ToString().PadLeft(2, '0') + "." + DateTime.Parse("25.11.2022").Month.ToString().PadLeft(2, '0') + "." + DateTime.Parse("25.11.2022").Year.ToString();
+                date = r;
                 int minutes = int.Parse(objSorted[i].Value[2].ToString());
                 int matu = int.Parse(objSorted[i].Value[3].ToString());
                 int? cp_Id = new List<string> { "", "NULL" }.Contains(objSorted[i].Value[6].ToString()) ? null : int.Parse(objSorted[i].Value[6].ToString());
