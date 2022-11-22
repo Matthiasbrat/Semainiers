@@ -20,12 +20,18 @@
 			<div style="width:120px;text-align:right;">
 				@if (loggedIn)
 				{
-					<a class="btn btn-sm btn-primary text-white" title="Account" href="account"><span class="oi oi-key"></span></a>
-					<button class="btn btn-sm btn-danger" title="Logout" @onclick="Logout"><span class="oi oi-account-logout"></span></button>
+					<a class="btn btn-sm btn-primary text-white" title="Account" href="account">
+						<span class="oi oi-key"></span>
+					</a>
+					<button class="btn btn-sm btn-danger" title="Logout" @onclick="Logout">
+						<span class="oi oi-account-logout"></span>
+					</button>
 				}
 				else
 				{
-					<button class="btn btn-sm btn-success" title="Login" @onclick="OpenLogin"><span class="oi oi-account-login"></span></button>
+					<button class="btn btn-sm btn-success" title="Login" @onclick="OpenLogin">
+						<span class="oi oi-account-login"></span>
+					</button>
 				}
 			</div>
 
@@ -116,7 +122,12 @@
 				first = false;
 				logintext = "Login";
 				UQID = Math.Abs(Guid.NewGuid().GetHashCode()).ToString();
-				try {await sendMail(user, UQID);} catch(Exception e) { first = true; logintext = "Send Mail"; };
+				if (!(await sendMail(user, UQID)))
+				{
+					first = true;
+					logintext = "Send Mail";
+					StateHasChanged();
+				}
 			}
 			if (code == UQID)
 			{
@@ -135,7 +146,7 @@
 		loggedIn = !string.IsNullOrEmpty(user);
 	}
 
-	private async Task sendMail(string email, string token) {
+	private async Task<bool> sendMail(string email, string token) {
 
 		/* Création d'un nouvel objet MailAddress avec l'adresse e-mail de l'utilisateur. */
 		MailAddress to = new MailAddress(email);
@@ -151,20 +162,23 @@
 		//SmtpClient client = new SmtpClient("mail.infomaniak.com", 25)
 
 		SmtpClient client = new SmtpClient("smtp-mail.outlook.com", 587)
-			{
-				Credentials = new NetworkCredential("support@semainiers.ch", "#Dragon_lion_8390"),
-				EnableSsl = true
-			};
+		{
+			Credentials = new NetworkCredential("support@semainiers.ch", "#Dragon_lion_8390"),
+			EnableSsl = true
+		};
+
 
 		/* Envoi d'un e-mail à l'utilisateur avec un jeton. */
 		try
 		{
 			client.Send(message);
+			return true;
 		}
 		catch (Exception e)
 		{
 			/* Affichage d'une boîte de message avec le message d'erreur. */
 			await JSRuntime.InvokeVoidAsync("alert", "Impossible d'envoyer l'email :\n" + e.Message);
+			return false;
 		}
 	}
 }

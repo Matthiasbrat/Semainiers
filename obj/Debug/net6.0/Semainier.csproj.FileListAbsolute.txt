@@ -87,7 +87,6 @@ N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\Semainier.genruntimeconfig.cache
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\ref\Semainier.dll
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Blazorise.dll
-N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Blazorise.DataGrid.dll
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -99,3 +98,8 @@ N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Blazorise.Bootstrap.dll
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\Blazorise.Icons.FontAwesome.dll
 N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\bin\Debug\net6.0\NuGet.Config
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\staticwebassets\msbuild.Semainier.Microsoft.AspNetCore.StaticWebAssets.props
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\staticwebassets\msbuild.build.Semainier.props
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Semainier.props
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Semainier.props
+N:\3eme\PR_Proj\P_Practice\realisation\Application_web_vsc2022\Semainier\obj\obj\Debug\net6.0\staticwebassets.pack.json
