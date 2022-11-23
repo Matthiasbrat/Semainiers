@@ -198,6 +198,15 @@
     {
         email = _elevesFilteredWithIdx[i].eleve.Email;
         selectedEleve = i;
+        foreach (var item in _elevesFilteredWithIdx)
+        {
+            if (item.eleve.Email == email)
+            {
+                await dbService.Connect();
+                item.eleve.numSemainiers = await eleveService.CountSemainiers(email);
+                await dbService.Disconnect();
+            }
+        }
 
         if (email != "")
         {

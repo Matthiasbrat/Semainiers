@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Semainier
 build_property.RootNamespace = Semainier
-build_property.ProjectDir = C:\temp\Semainiers\
+build_property.ProjectDir = c:\temp\Semainiers\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\temp\Semainiers
+build_property.MSBuildProjectDirectory = c:\temp\Semainiers
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/temp/Semainiers/App.razor]
+[c:/temp/Semainiers/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Pages/Account.razor]
+[c:/temp/Semainiers/Pages/Account.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Pages/CoachView.razor]
+[c:/temp/Semainiers/Pages/CoachView.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29hY2hWaWV3LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Pages/Error.razor]
+[c:/temp/Semainiers/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Shared/LoadingScreen.razor]
+[c:/temp/Semainiers/Shared/LoadingScreen.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmdTY3JlZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/_Imports.razor]
+[c:/temp/Semainiers/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Shared/MainLayout.razor]
+[c:/temp/Semainiers/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1s65xtx5iw
 
-[C:/temp/Semainiers/Shared/NavMenu.razor]
+[c:/temp/Semainiers/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-szgpd83mdg
 
-[C:/temp/Semainiers/Pages/Error.cshtml]
+[c:/temp/Semainiers/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Pages/_Host.cshtml]
+[c:/temp/Semainiers/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/temp/Semainiers/Pages/_Layout.cshtml]
+[c:/temp/Semainiers/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
