@@ -29,7 +29,7 @@ namespace Semainier.Data
 
             dates.ForEach(date =>
             {
-                if (Semainier.weekDays[week].Contains(DateTime.Parse(date).Day.ToString().PadLeft(2, '0') + "." + DateTime.Parse(date).Month.ToString().PadLeft(2, '0')))
+                if (Semainier.weekDays[week].Contains(date.Split(' ')[0]))
                 {
                     lstFilteredSemainiers.Add(date);
                 }
