@@ -1,4 +1,5 @@
-﻿using static Semainier.Data.DB;
+﻿using System.Globalization;
+using static Semainier.Data.DB;
 
 namespace Semainier.Data
 {
@@ -56,9 +57,7 @@ namespace Semainier.Data
                 /* Analyser les données du tableau trié et les mettre dans des variables. */
                 int realId = int.Parse(objSorted[i].Value[0].ToString());
                 int id = objSorted[i].Index;
-                string date = objSorted[i].Value[1].ToString();
-                string r = DateTime.Parse("25.11.2022").Day.ToString().PadLeft(2, '0') + "." + DateTime.Parse("25.11.2022").Month.ToString().PadLeft(2, '0') + "." + DateTime.Parse("25.11.2022").Year.ToString();
-                date = r;
+                string date = objSorted[i].Value[1].ToString().Split(' ')[0];
                 int minutes = int.Parse(objSorted[i].Value[2].ToString());
                 int matu = int.Parse(objSorted[i].Value[3].ToString());
                 int? cp_Id = new List<string> { "", "NULL" }.Contains(objSorted[i].Value[6].ToString()) ? null : int.Parse(objSorted[i].Value[6].ToString());
